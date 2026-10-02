@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jie Zhou — Portfolio</title>
+<style>
+  :root { --bg:#f7f6f3; --card:#ffffff; --ink:#1f2937; --muted:#6b7280; --line:#e5e1d8; --accent:#1d4ed8; --gold:#b8860b; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); margin:0; line-height:1.65; }
+  .wrap { max-width:960px; margin:0 auto; padding:40px 24px 64px; }
+  header.hero { text-align:center; padding:48px 0 16px; }
+  header.hero h1 { font-size:2.4rem; letter-spacing:.1em; margin:0 0 8px; }
+  header.hero .tagline { color:var(--muted); font-size:1.05rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:28px 32px; margin-top:24px; }
+  h2 { font-size:1.05rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); border-bottom:2px solid var(--line); padding-bottom:8px; margin:0 0 20px; }
+  /* Business card */
+  .biz { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+  .biz .avatar { width:96px; height:96px; border-radius:50%; background:linear-gradient(135deg,#1d4ed8,#3b82f6); color:#fff; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:700; flex-shrink:0; }
+  .biz .info h3 { margin:0 0 4px; font-size:1.4rem; }
+  .biz .info p { margin:4px 0; color:var(--muted); }
+  .biz .info a { color:var(--accent); text-decoration:none; }
+  .roles { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .role-tag { background:#eef2ff; color:var(--accent); border-radius:999px; padding:4px 14px; font-size:.85rem; }
+  /* Apps grid */
+  .apps { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:20px; }
+  .app { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; text-align:center; transition:transform .15s, box-shadow .15s; }
+  .app:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.08); }
+  .app img { width:72px; height:72px; border-radius:16px; margin-bottom:12px; }
+  .app h3 { margin:0 0 4px; font-size:1.15rem; }
+  .app .ver { color:var(--muted); font-size:.85rem; margin-bottom:8px; }
+  .app .desc { font-size:.92rem; color:var(--muted); margin-bottom:12px; min-height:44px; }
+  .app .price { font-weight:700; color:var(--accent); margin-bottom:14px; font-size:.95rem; }
+  .app .price.free { color:#059669; }
+  .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:10px 28px; border-radius:8px; font-weight:600; font-size:.95rem; }
+  .btn:hover { background:#1e40af; }
+  /* Websites */
+  .sites { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; }
+  .site { background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:20px; }
+  .site h4 { margin:0 0 6px; font-size:1rem; }
+  .site p { margin:0 0 10px; font-size:.88rem; color:var(--muted); }
+  .site a { color:var(--accent); text-decoration:none; font-weight:600; font-size:.9rem; }
+  /* Church */
+  .church { background:linear-gradient(135deg,#1a1a2e,#16213e); color:#e8e0c8; border-radius:12px; padding:32px; margin-top:24px; }
+  .church h2 { color:var(--gold); border-bottom-color:#3a3a5e; }
+  .church p { color:#c8c0a8; }
+  .church a { color:var(--gold); font-weight:600; text-decoration:none; }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; margin-top:48px; }
+  @media (max-width:600px){ .card{padding:20px;} header.hero h1{font-size:1.8rem;} .apps{grid-template-columns:1fr;} }
+</style>
+<script>
+(function(){
+var T=496826735;
+function h(s){var h1=0xdeadbeef,h2=0x41c6ce57;for(var i=0;i<s.length;i++){var c=s.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h1^=h1>>>16;h1=Math.imul(h1,2246822507);h1^=h1>>>13;h2=Math.imul(h2^c,2654435761);h2^=h2>>>16;h2=Math.imul(h2,2246822507);h2^=h2>>>13;}return (h2*2097152+(h1>>>11))>>>0;}
+function showLock(){
+document.title='Locked';
+var css='html,body{height:100%}body{font-family:system-ui,-apple-system,sans-serif;background:#f7f6f3;color:#1f2937;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}.box{background:#ffffff;border:1px solid #e5e1d8;padding:36px;border-radius:12px;text-align:center;max-width:320px;width:90%}input{padding:10px;width:100%;box-sizing:border-box;margin:12px 0;border-radius:6px;border:1px solid #e5e1d8;font-size:16px;background:#fff;color:#111}button{background:#1d4ed8;color:#ffffff;border:none;padding:10px 24px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:16px}.err{color:#dc2626;font-size:14px;min-height:20px}';
+var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+document.body.innerHTML='<div class="box"><h2>\uD83D\uDD12 Jie Zhou \u2014 Portfolio</h2><p style="color:#6b7280">This page is private. Please enter the password.</p><div class="err" id="__e"></div><input type="password" id="__p" placeholder="Password"><br><button id="__b">View</button></div>';
+document.documentElement.style.display='';
+function go(){var v=document.getElementById('__p').value;if(h(v)===T){try{sessionStorage.setItem('portfolio_ok','1');}catch(e){}location.reload();}else{document.getElementById('__e').textContent='Wrong password, try again.';}}
+document.getElementById('__b').addEventListener('click',go);
+document.getElementById('__p').addEventListener('keydown',function(e){if(e.key==='Enter')go();});
+setTimeout(function(){var i=document.getElementById('__p');if(i)i.focus();},50);
+}
+var ok=false;
+try{ok=sessionStorage.getItem('portfolio_ok')==='1';}catch(e){}
+if(ok)return;
+document.documentElement.style.display='none';
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',showLock);}else{showLock();}
+})();
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>JIE ZHOU</h1>
+  <p class="tagline">Apps &bull; Websites &bull; Ministry</p>
+</header>
+
+<!-- Business Card -->
+<div class="card">
+  <h2>About Me</h2>
+  <div class="biz">
+    <div class="avatar">JZ</div>
+    <div class="info">
+      <h3>Jie Zhou</h3>
+      <p>Bilingual Customer Service (Chinese / English)</p>
+      <p>Email: <a href="mailto:zjie2025@gmail.com">zjie2025@gmail.com</a></p>
+      <div class="roles">
+        <span class="role-tag">Empower Driver</span>
+        <span class="role-tag">Church Chairman</span>
+        <span class="role-tag">App Developer</span>
+        <span class="role-tag">Bilingual Support</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- My Apps -->
+<div class="card">
+  <h2>My Apps</h2>
+  <div class="apps">
+    <div class="app">
+      <img src="icons/pdftool.png" alt="PDF Toolbox">
+      <h3>PDF Toolbox</h3>
+      <div class="ver">v1.6</div>
+      <div class="desc">Merge, split &amp; convert PDFs. Read and annotate free.</div>
+      <div class="price">$1.99/mo subscription</div>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=1nt70VUiduVf7OpSWGnf06cG5-Wpw8Tho">Download APK</a>
+    </div>
+    <div class="app">
+      <img src="icons/jingdu.png" alt="Daily Reading">
+      <h3>Daily Reading</h3>
+      <div class="ver">v1.5</div>
+      <div class="desc">Book summaries, reader &amp; listen. Import your own books.</div>
+      <div class="price">$1.99/mo subscription</div>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=1GWPHGK0WIi2Je4WBHDixhkXLvTPUia-m">Download APK</a>
+    </div>
+    <div class="app">
+      <img src="icons/kidsbible.png" alt="Kids Bible World">
+      <h3>Kids Bible World</h3>
+      <div class="ver">v1.1</div>
+      <div class="desc">40 Bible stories for kids in 10 languages. Free forever.</div>
+      <div class="price free">Free</div>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=14c7T-SmziSChQuQOc0f3XUG2SSd2HgEf">Download APK</a>
+    </div>
+    <div class="app">
+      <img src="icons/liubc.png" alt="LIUBC Church">
+      <h3>长岛联合圣经教会</h3>
+      <div class="ver">v2.2</div>
+      <div class="desc">Official app for Long Island United Bible Church. Free.</div>
+      <div class="price free">Free</div>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=1reeao3ENFb92EJ4K_kbPPK_KmpRWB-Or">Download APK</a>
+    </div>
+    <div class="app">
+      <img src="icons/blackcat.png" alt="Black Cat">
+      <h3>小黑猫</h3>
+      <div class="ver">v1.2</div>
+      <div class="desc">Virtual pet cat for self-care. Feed, play &amp; relax. (Chinese)</div>
+      <div class="price free">Free</div>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=1kDTzRb8lNifWYKLZOUpJizpYdIONFRHP">Download APK</a>
+    </div>
+  </div>
+</div>
+
+<!-- My Websites -->
+<div class="card">
+  <h2>My Websites</h2>
+  <div class="sites">
+    <div class="site">
+      <h4>nybangbang.com</h4>
+      <p>Personal website — church life &amp; life in America.</p>
+      <a href="https://nybangbang.com" target="_blank">Visit &rarr;</a>
+    </div>
+    <div class="site">
+      <h4>liubc.org</h4>
+      <p>Long Island United Bible Church official site.</p>
+      <a href="https://liubc.org" target="_blank">Visit &rarr;</a>
+    </div>
+    <div class="site">
+      <h4>Web Design Services</h4>
+      <p>Freelance web design portfolio (GitHub Pages).</p>
+      <a href="https://zjie2025.github.io/website-design/" target="_blank">Visit &rarr;</a>
+    </div>
+    <div class="site">
+      <h4>NYC Personal Assistant</h4>
+      <p>Bilingual companion &amp; errand services (GitHub Pages).</p>
+      <a href="https://zjie2025.github.io/NYC-Personal-Assistant/" target="_blank">Visit &rarr;</a>
+    </div>
+    <div class="site">
+      <h4>LIUBC App Page</h4>
+      <p>Church app landing page (GitHub Pages).</p>
+      <a href="https://zjie2025.github.io/liubc-app/" target="_blank">Visit &rarr;</a>
+    </div>
+    <div class="site">
+      <h4>Online Resume</h4>
+      <p>Password-protected resume (GitHub Pages).</p>
+      <a href="https://zjie2025.github.io/website-design/resume/" target="_blank">Visit &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- Church -->
+<div class="church">
+  <h2>Ministry</h2>
+  <p><strong>Long Island United Bible Church</strong> — serving as Chairman.</p>
+  <p>Celebrating our <strong>14th Anniversary</strong> this October! Join us for the banquet on October 24, 2026.</p>
+  <p><a href="https://liubc.org" target="_blank">Visit liubc.org &rarr;</a></p>
+</div>
+
+<footer>
+  <p>&copy; 2026 Jie Zhou. All rights reserved.</p>
+</footer>
+
+</div>
+</body>
+</html>
